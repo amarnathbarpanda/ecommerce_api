@@ -2,10 +2,13 @@
 const mongoose = require('mongoose');
 
 //connect to mongodb
-mongoose.connect('mongodb://localhost:27017/ecommerce_api', {
+mongoose.connect(process.env.MONGO_URI ||'mongodb://localhost:27017/ecommerce_api', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
+
+
+// aq4xYKr5hVx36vc1
 
 //acquire the connection to check if it is successful
 const db = mongoose.connection;
