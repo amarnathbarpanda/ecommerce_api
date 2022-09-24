@@ -1,6 +1,7 @@
 //getting all the libraries and modules
 const express = require('express');
 const bodyParser = require('body-parser');
+const db = require('./config/mongoose');
 
 const port = 8000;
 
