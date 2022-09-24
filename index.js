@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./config/mongoose');
+const productRoutes = require('./routes/productRoutes');
 
 const port = 8000;
 
@@ -12,6 +13,7 @@ const app = express();
 //middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use('/', productRoutes);
 
 app.get('/', (req, res)=>{
     res.send('Hey node server is running');
