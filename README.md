@@ -59,4 +59,5 @@ fetch('https://ecommerce-api9.herokuapp.com/products/<product_id>', options)
 
 # Screenshot
 - /products get all products
+
   ![All Products](images/json.png)
